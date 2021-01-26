@@ -109,7 +109,7 @@ function getQuestion()
    alert('entro ')
 }
 
-function editQuestionCreadee(questionModified,newAnswer)
+function editQuestionCreated(questionModified,newAnswer)
 {
   let questions  = JSON.parse(localStorage.getItem('questionsGlobal'));
   for (let index = 0; index < questions.length; index++) {
@@ -135,14 +135,12 @@ function editQuestion(question)
     document.querySelector('#newForm').addEventListener('submit',function(){
       let newAnswerr = document.querySelector('#newAnswer').value;
      
-       
-      // SaveQuestion(question,newAnswerr);
-      editQuestionCreadee(question,newAnswerr);
+      editQuestionCreated(question,newAnswerr);
 
       result.innerHTML = '';
       cardEdit.innerHTML = '';
       getQuestion();
 
     });   
-  // SaveQuestion(question,newAnswe)
+ 
 }
